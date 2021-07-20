@@ -1,12 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import s from './Contact.module.css';
 
 const Contact = ({ id, name, number, onDeleteContact }) => {
   return (
-    <li>
-      <span>{name}:</span>
-      <span>{number}</span>
-      <button onClick={() => onDeleteContact(id)}>Delete</button>
+    <li className={s.li}>
+      <span className={s.name}>{name}:</span>
+      <span className={s.number}>{number}</span>
+      <button className={s.button} onClick={() => onDeleteContact(id)}>
+        Delete
+      </button>
     </li>
   );
 };
